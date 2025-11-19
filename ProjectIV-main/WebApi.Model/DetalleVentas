@@ -1,0 +1,31 @@
+using System;
+using System.ComponentModel.DataAnnotations;
+
+public class DetalleVentaModel
+{
+
+    public int? IdDetalleVenta { get; set; }
+
+    public int? IdVenta { get; set; }
+
+    [Range(1, int.MaxValue, ErrorMessage = "Debe seleccionar un inventario válido.")]
+    public int IdInventario { get; set; }
+
+    [Range(1, int.MaxValue, ErrorMessage = "La cantidad debe ser mayor a 0.")]
+    public int Cantidad { get; set; }
+
+    [Range(0.01, double.MaxValue, ErrorMessage = "El precio de venta debe ser mayor a 0.")]
+    public decimal PrecioVenta { get; set; }
+
+    public decimal? MontoTotalDetalle { get; set; }
+
+    public bool? Estado { get; set; }
+
+    public int? IdProducto { get; set; }
+
+    public decimal? PrecioUnitarioProducto { get; set; }
+}
+
+
+
+    
